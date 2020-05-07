@@ -1779,7 +1779,10 @@ button {
     padding: 3px 0 0 0;
   }
   .nav-bar {
-    padding: 25px 0 0 0;
+    padding: 20px 0 0 0;
+  }
+  .nav-bar.fixed {
+    padding: 20px 0;
   }
   .nav-bar .logo-container {
     width: unset;
