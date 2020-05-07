@@ -137,7 +137,11 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 230px;
+  width: 290px;
+}
+
+.pre-loader .content img {
+  width: 100%;
 }
 
 @-webkit-keyframes loader {
@@ -1376,6 +1380,9 @@ button {
 }
 
 @media (max-width: 992px) {
+  .pre-loader .content {
+    width: 230px;
+  }
   .nav-bar .title {
     display: none;
   }
@@ -1711,7 +1718,7 @@ button {
     margin: 25px 0 0 0;
   }
   .footer .list-header {
-    margin: 10px 0;
+    margin: 20px 0;
     position: relative;
   }
   .footer .list-header::after {
