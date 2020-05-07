@@ -373,6 +373,11 @@ button {
   width: 260px;
 }
 
+.nav-bar .logo img {
+  -webkit-filter: brightness(0%) invert(1);
+          filter: brightness(0%) invert(1);
+}
+
 .nav-bar .icons {
   width: 260px;
   display: -webkit-box;
@@ -508,6 +513,44 @@ button {
   top: 20px;
   opacity: 1;
   visibility: visible;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+  padding: 20px 0;
+}
+
+.fixed .logo img {
+  -webkit-filter: brightness(100%) invert(0);
+          filter: brightness(100%) invert(0);
+}
+
+.fixed .lang-switcher {
+  color: #1a1a1a;
+}
+
+.fixed .lang-switcher span::after {
+  color: #1a1a1a;
+}
+
+.fixed .lang-switcher .switch {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+}
+
+.fixed .icons button {
+  color: #1a1a1a;
+}
+
+.fixed .nav-list .list li {
+  color: #1a1a1a;
 }
 
 /*------ navbar end ------*/
@@ -1831,6 +1874,11 @@ html[dir="rtl"] .new-arrival .new-arrival-header {
 
 html[dir="rtl"] .new-arrival .selector .select li {
   font-family: ar-md;
+}
+
+html[dir="rtl"] .card .offer {
+  left: unset;
+  right: 0;
 }
 
 html[dir="rtl"] .card .title {
