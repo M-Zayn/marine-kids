@@ -377,6 +377,10 @@ button {
   width: 260px;
 }
 
+.nav-bar .logo-container .logo {
+  width: 206px;
+}
+
 .nav-bar .logo img {
   -webkit-filter: brightness(0%) invert(1);
           filter: brightness(0%) invert(1);
@@ -1135,6 +1139,10 @@ button {
       -ms-flex-align: start;
           align-items: flex-start;
   margin: 0 0 0px 0;
+}
+
+.footer .sp-footer .footer-img img {
+  width: 206px;
 }
 
 .footer .list-header {
