@@ -1965,6 +1965,9 @@ html[dir="rtl"] .footer .copyrights span {
     right: unset;
     left: 0;
   }
+  html[dir="rtl"] .fixed-menu .main-list .slide.active::after {
+    content: "";
+  }
   html[dir="rtl"] .servs .service .serv-text {
     padding: 20px 0;
   }
