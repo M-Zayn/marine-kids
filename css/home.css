@@ -1961,6 +1961,10 @@ html[dir="rtl"] .footer .copyrights span {
     right: unset;
     left: 15px;
   }
+  html[dir="rtl"] .fixed-menu .main-list .slide::after {
+    right: unset;
+    left: 0;
+  }
   html[dir="rtl"] .servs .service .serv-text {
     padding: 20px 0;
   }
