@@ -42,7 +42,13 @@ $(function() {
   });
 
 
-    
+    $(window).scroll(function(){
+      if($(window).scrollTop() > $(".nav-bar").innerHeight()){
+          $(".nav-bar").addClass("fixed");
+      } else {
+        $(".nav-bar").removeClass("fixed");
+      }
+    });
   
     
     $('.header .owl-carousel').owlCarousel({
