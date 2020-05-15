@@ -1482,6 +1482,11 @@ button {
 }
 
 /*------ responsive ------*/
+@media (min-width: 1900px) {
+  .nav-bar .icons .user-hover {
+    right: 299px !important;
+  }
+}
 @media (min-width: 1600px) {
   .owl-carousel .owl-item img {
     width: 100%;
@@ -2068,6 +2073,12 @@ html[dir="rtl"] .footer .subscribe button {
 
 html[dir="rtl"] .footer .copyrights span {
   font-family: ar-reg;
+}
+@media (min-width: 1920px) {
+  html[dir="rtl"] .nav-bar .icons .user-hover {
+    right: unset !important;
+    left: 301px !important;
+  }
 }
 @media (min-width: 1600px) {
   html[dir="rtl"] .nav-bar .icons .user-hover {
