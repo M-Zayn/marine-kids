@@ -336,9 +336,7 @@ button {
           box-shadow: 0px 0px 10px 0px rgba(240, 60, 51, 0.5);
 }
 
-.search-container .search::after {
-  content: "";
-  font-family: "Linearicons-Free";
+.search-container .search button {
   font-size: 18px;
   color: #0f0f0f;
   position: absolute;
@@ -399,7 +397,7 @@ button {
           align-items: center;
 }
 
-.nav-bar .icons button {
+.nav-bar .icons > a {
   font-size: 22px;
   color: white;
   position: relative;
@@ -407,13 +405,50 @@ button {
   margin: 0 23px 0 0;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+  cursor: pointer;
 }
 
-.nav-bar .icons button:last-child {
+.nav-bar .icons > a:last-child {
   margin: 0;
 }
 
-.nav-bar .icons button:hover {
+.nav-bar .icons > a:hover {
+  color: #f03b32;
+}
+
+.nav-bar .icons .user-icon:hover + .user-hover {
+  opacity: 1;
+  visibility: visible;
+  top: 80px;
+}
+.nav-bar .icons .user-hover {
+  font-family: ar-reg;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 90px;
+  left: 156px;
+  width: 110px;
+  background-color: white;
+  color: #1a1a1a;
+  border-radius: 5px;
+  padding: 5px 0;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+.nav-bar .icons .user-hover a {
+  display: block;
+  text-align: center;
+  margin: 5px 0;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+.nav-bar .icons .user-hover:hover {
+  opacity: 1;
+  visibility: visible;
+  top: 80px;
+}
+.nav-bar .icons .user-hover a:hover {
   color: #f03b32;
 }
 
@@ -553,7 +588,7 @@ button {
           box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
 }
 
-.fixed .icons button {
+.fixed .icons > a {
   color: #1a1a1a;
 }
 
@@ -671,7 +706,7 @@ button {
   transition: all .3s ease-in-out;
 }
 
-.fixed-icon button {
+.fixed-icon a {
   color: #fff;
 }
 
@@ -960,9 +995,9 @@ button {
   margin: 0 3px;
   width: 24px;
   height: 24px;
-  border-style: solid;
+  /* border-style: solid;
   border-width: 1px;
-  border-color: #cccccc;
+  border-color: #cccccc; */
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -973,6 +1008,64 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+}
+/* Hide the browser's default radio button */
+.card .colors .color-border input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.card .colors .color-border .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #cccccc;
+  z-index: 1;
+}
+
+
+.card .colors .color-border input {
+  margin: 0;
+  width: 12px;
+  height: 12px;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* When the radio button is checked, add a blue background */
+.card .colors .color-border input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.card .colors .color-border .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.card .colors .color-border input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.card .colors .color-border .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
 }
 
 .card .colors .color-border .color {
@@ -983,39 +1076,39 @@ button {
 }
 
 .card .colors .color-border .blue-1 {
-  background-color: #88d7c4;
+  background-color: #88d7c4 !important;
 }
 
 .card .colors .color-border .blue-2 {
-  background-color: #3b8dd6;
+  background-color: #3b8dd6 !important;
 }
 
 .card .colors .color-border .blue-3 {
-  background-color: #223b74;
+  background-color: #223b74 !important;
 }
 
 .card .colors .color-border .yellow-1 {
-  background-color: #e3bd2c;
+  background-color: #e3bd2c !important;
 }
 
 .card .colors .color-border .black-1 {
-  background-color: #313131;
+  background-color: #313131 !important;
 }
 
 .card .colors .color-border .brown-1 {
-  background-color: #6b5933;
+  background-color: #6b5933 !important;
 }
 
 .card .colors .color-border .green-1 {
-  background-color: #409e30;
+  background-color: #409e30 !important;
 }
 
 .card .colors .color-border .pirple-1 {
-  background-color: #f86182;
+  background-color: #f86182 !important;
 }
 
 .card .colors .color-border .gray-1 {
-  background-color: #e0d3cd;
+  background-color: #e0d3cd !important;
 }
 
 .card .title {
@@ -1384,6 +1477,9 @@ button {
   }
   .container {
     width: 1440px;
+  }
+  .nav-bar .icons .user-hover {
+    left: 304px;
   }
 }
 
@@ -1855,7 +1951,7 @@ button {
 }
 
 /*------ direction ------*/
-html[dir="rtl"] .search-container .search::after {
+html[dir="rtl"] .search-container .search button {
   right: unset;
   left: 20px;
 }
@@ -1874,11 +1970,11 @@ html[dir="rtl"] .nav-bar .lang-switcher .switch {
           transform: translateX(-50%);
 }
 
-html[dir="rtl"] .nav-bar .icons button {
+html[dir="rtl"] .nav-bar .icons > a {
   margin: 0 0 0 23px;
 }
 
-html[dir="rtl"] .nav-bar .icons button:last-child {
+html[dir="rtl"] .nav-bar .icons > a:last-child {
   margin: 0;
 }
 
