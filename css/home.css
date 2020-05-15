@@ -427,7 +427,7 @@ button {
   visibility: hidden;
   position: absolute;
   top: 90px;
-  left: 156px;
+  right: 156px;
   width: 110px;
   background-color: white;
   color: #1a1a1a;
@@ -435,6 +435,8 @@ button {
   padding: 5px 0;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
 }
 .nav-bar .icons .user-hover a {
   display: block;
@@ -587,7 +589,12 @@ button {
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
           box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
 }
-
+.fixed .icons .user-icon:hover + .user-hover {
+  top: 60px;
+}
+.fixed .icons .user-hover:hover {
+  top: 60px;
+}
 .fixed .icons > a {
   color: #1a1a1a;
 }
@@ -712,6 +719,10 @@ button {
 
 .fixed-icon:hover {
   background-color: #f03b32;
+  color: #fff;
+}
+.fixed-icon:hover button {
+  color: #fff;
 }
 
 /*------ category start ------*/
@@ -1479,7 +1490,7 @@ button {
     width: 1440px;
   }
   .nav-bar .icons .user-hover {
-    left: 304px;
+    right: 140px;
   }
 }
 
@@ -1951,6 +1962,10 @@ button {
 }
 
 /*------ direction ------*/
+html[dir="rtl"] .nav-bar .icons .user-hover {
+  left: 156px;
+  right: unset;
+}
 html[dir="rtl"] .search-container .search button {
   right: unset;
   left: 20px;
@@ -2054,7 +2069,11 @@ html[dir="rtl"] .footer .subscribe button {
 html[dir="rtl"] .footer .copyrights span {
   font-family: ar-reg;
 }
-
+@media (min-width: 1600px) {
+  html[dir="rtl"] .nav-bar .icons .user-hover {
+    left: 143px;
+  }
+}
 @media (max-width: 992px) {
   html[dir="rtl"] .fixed-menu .menu {
     left: unset;
